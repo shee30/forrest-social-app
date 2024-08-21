@@ -14,27 +14,20 @@ import about from "./assets/about.png";
 import line from "./assets/line.svg";
 import btn1 from "./assets/btn1.png";
 import btn2 from "./assets/btn2.png";
-import phone1 from "./assets/phone1.png";
-import phone2 from "./assets/phone2.png";
-import phone3 from "./assets/phone3.png";
+import phone1 from "./assets/phone1.svg";
+import phone2 from "./assets/phone2.svg";
+import phone3 from "./assets/phone3.svg";
 import lady1 from "./assets/lady1.png";
 import lady2 from "./assets/lady2.png";
 import Lorem from "./components/lorem";
 import LoremIpsum from "./components/LoremIpsum";
-import {
-  FaFacebook,
-  FaFacebookF,
-  FaFacebookSquare,
-  FaInstagram,
-  FaLinkedin,
-  FaLinkedinIn,
-} from "react-icons/fa";
-import { FaSquareInstagram } from "react-icons/fa6";
+import Footer from "./components/Footer";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const App = () => {
   return (
     <>
-      <div className="bg-hero bg-cover h-[100%] overflow-x-hidden">
+      <div className="bg-hero bg-contain h-[100%] overflow-x-hidden">
         <div className="pl-10">
           <div className="py-10 pl-28">
             <img src={logo} className="w-16 h-16 rounded-2xl"></img>
@@ -155,13 +148,13 @@ const App = () => {
             <Lorem
               title="01"
               h1="Lorem ipsum dolor sit."
-              p="        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem sunt, inventore culpa eius repellendus similique laboriosam voluptas nesciunt rem quibusdam autem odit consequatur, dolor beatae?"
+              p=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem sunt, inventore culpa eius repellendus similique laboriosam voluptas nesciunt rem quibusdam autem odit consequatur, dolor beatae?"
             />
             <img src={line} className=""></img>
             <Lorem
               title="02"
               h1="Lorem ipsum dolor sit."
-              p="        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem sunt, inventore culpa eius repellendus similique laboriosam voluptas nesciunt rem quibusdam autem odit consequatur, dolor beatae?"
+              p="Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem sunt, inventore culpa eius repellendus similique laboriosam voluptas nesciunt rem quibusdam autem odit consequatur, dolor beatae?"
             />
 
             <img src={line}></img>
@@ -186,25 +179,25 @@ const App = () => {
       </div>
 
       {/* lorem ipsum */}
-      <div>
-        <div className="flex flex-wrap justify-center items-center relative ">
-          <div>
+      <div className="">
+        <div className="flex flex-wrap justify-center items-center ">
+          <div className="">
             <img src={phone1} className="w-[50rem] h-[100%] "></img>
           </div>
-          <div className="w-1/3 relative right-20 bottom-9">
+          <div className="w-1/3">
             <LoremIpsum />
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center relative bottom-40 ">
-          <div className="w-1/3  relative left-20 bottom-9">
+        <div className="flex flex-wrap justify-center items-center ">
+          <div className="w-1/3">
             <LoremIpsum />
           </div>
-          <div>
-            <img src={phone2} className="w-[50rem] h-[100%] "></img>
+          <div className="">
+            <img src={phone2} className="w-[50rem] h-[100%]"></img>
           </div>
         </div>
-        <div className="flex flex-wrap justify-center items-center relative bottom-96">
+        <div className="flex flex-wrap justify-center items-center">
           <div>
             <img src={phone3} className="w-[50rem] h-[100%] "></img>
           </div>
@@ -215,12 +208,15 @@ const App = () => {
       </div>
 
       {/* customer feedback */}
-      <div className=" translate-y-[-30rem] bg-yellow-300 h-[100vh]">
-        <div>
-          <h1>Our Customer Feedback</h1>
+      <div className=" bg-blue-50 my-10">
+        <div className="flex justify-between items-center mx-40">
           <div>
-            <button> Previous</button>
-            <button> Next</button>
+          <h1 className="text-4xl font-semibold">Our Customer Feedback</h1>
+            <p className="text-base text-gray-700">Don't take our word for it. Trust our customers</p>
+            </div>
+          <div className="flex">
+            <button className="border-2 border-black flex justify-center items-center mx-3 rounded-2xl py-1 px-2" ><IoIosArrowBack /> Previous</button>
+            <button className="border-2 border-black flex justify-center items-center mx-3 rounded-2xl py-1 px-3"> Next <IoIosArrowForward /></button>
           </div>
         </div>
         <div></div>
@@ -260,20 +256,8 @@ const App = () => {
 
         <div className="relative ">
           <img src={bottom} className=""></img>
-          <div className="absolute translate-y-2/4 top-[60%] flex justify-around items-center w-full">
-            <p>&copy;2024 Forrest App. All rights reserved.</p>
-            <p>Terms & Conditions &nbsp;&nbsp; Privacy Policy</p>
-            <div>
-              <button className="w-8 h-8 bg-black mx-2 px-2 rounded-full">
-                <FaFacebookF className="text-white " />
-              </button>
-              <button className="w-8 h-8 bg-black mx-2 px-2 rounded-full">
-                <FaInstagram className="text-white" />
-              </button>
-              <button className="w-8 h-8 bg-black mx-2 px-2 rounded-full">
-                <FaLinkedinIn className="text-white" />
-              </button>
-            </div>
+          <div className="absolute translate-y-2/4 top-[60%] w-full">
+           <Footer/>
           </div>
         </div>
       </div>
