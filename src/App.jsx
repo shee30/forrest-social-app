@@ -23,6 +23,12 @@ import Lorem from "./components/lorem";
 import LoremIpsum from "./components/LoremIpsum";
 import Footer from "./components/Footer";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import Testimonial from "./components/Testimonial";
+
+import person1 from './assets/person1.png'
+import person2 from './assets/person2.png'
+import person3 from './assets/person3.png'
+
 
 const App = () => {
   return (
@@ -208,18 +214,39 @@ const App = () => {
       </div>
 
       {/* customer feedback */}
-      <div className=" bg-blue-50 my-10">
-        <div className="flex justify-between items-center mx-40">
+      <div className=" bg-blue-50 my-10 ">
+        <div className="flex justify-between items-center mx-24 pt-20">
           <div>
           <h1 className="text-4xl font-semibold">Our Customer Feedback</h1>
             <p className="text-base text-gray-700">Don't take our word for it. Trust our customers</p>
             </div>
           <div className="flex">
-            <button className="border-2 border-black flex justify-center items-center mx-3 rounded-2xl py-1 px-2" ><IoIosArrowBack /> Previous</button>
+            <button className="border-2 border-black flex justify-center items-center mx-3 rounded-2xl py-1 px-2 opacity-30" ><IoIosArrowBack /> Previous</button>
             <button className="border-2 border-black flex justify-center items-center mx-3 rounded-2xl py-1 px-3"> Next <IoIosArrowForward /></button>
           </div>
         </div>
-        <div></div>
+        <div className="mx-24 my-10 pb-10 flex justify-between">
+          <Testimonial 
+          src={person1}
+          ratingValue="3.5"
+          h1="FLoyd Miles"
+          p=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit.  Ut, ipsam? Lorem ipsum dolor sit amet consectetur adipisicing elit. A, itaque!"
+          />
+
+<Testimonial 
+          src={person2}
+          ratingValue="4.5"
+          h1="Ronald Richards"
+          p=" Lorem ipsum dolor sit amet consectetur adipisicing elit.  Ut, ipsam? Lorem ipsum dolor sit amet consectetur adipisicing elit. A, itaque!"
+          />
+
+<Testimonial 
+          src={person3}
+          ratingValue="5"
+          h1="Savannah Nguyen"
+          p=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit.  Ut, ipsam? Lorem ipsum dolor sit amet consectetur adipisicing elit. A, itaque!"
+          />
+        </div>
       </div>
 
 
